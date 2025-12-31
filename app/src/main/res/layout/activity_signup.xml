@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_primary"
+        android:padding="24dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Chola"
+            android:textSize="18sp"
+            android:layout_marginTop="96dp"
+            android:textColor="#EEEEEE"
+            android:textStyle="bold"
+            android:fontFamily="@font/spacegrotesk_regular"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please fill all details correctly!"
+            android:textSize="13sp"
+            android:textColor="#EEEEEE"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/spacegrotesk_regular"/>
+
+        <EditText
+            android:id="@+id/inputFullName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:textSize="14sp"
+            android:hint="First Name"
+            android:padding="12dp"
+            android:textColorHint="#999999"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:background="@drawable/rounded_input"/>
+
+        <EditText
+            android:id="@+id/inputMatricNo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:textSize="14sp"
+            android:hint="Matric No"
+            android:padding="12dp"
+            android:textColorHint="#999999"
+            android:textColor="@color/white"
+            android:inputType="text"
+            android:background="@drawable/rounded_input"/>
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:textSize="14sp"
+            android:hint="Email"
+            android:padding="12dp"
+            android:textColorHint="#999999"
+            android:textColor="@color/white"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/rounded_input"/>
+
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:layout_marginTop="26dp"
+            android:hint="Password"
+            android:padding="12dp"
+            android:textColorHint="#999999"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_input"
+            android:inputType="textPassword"/>
+
+        <EditText
+            android:id="@+id/inputSamePassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:layout_marginTop="26dp"
+            android:hint="Confirm Password"
+            android:padding="12dp"
+            android:textColorHint="#999999"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_input"
+            android:inputType="textPassword"/>
+
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Sign Up"
+            android:fontFamily="@font/spacegrotesk_regular"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/rounded_button"/>
+
+        <!-- Signup Link -->
+        <TextView
+            android:id="@+id/txtLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already a User? Login "
+            android:textSize="14sp"
+            android:fontFamily="@font/spacegrotesk_regular"
+            android:textColor="#EEEEEE"
+            android:layout_marginTop="16dp"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
