@@ -2,87 +2,83 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity"
-    >
-
+    android:background="@color/app_primary">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/app_primary"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:padding="24dp">
-
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send Money"
             android:textSize="25sp"
-            android:textColor="#EEEEEE"
-            android:layout_marginTop="58dp"
             android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="78dp"
             android:fontFamily="@font/spacegrotesk_regular"/>
 
-       <com.google.android.material.textfield.TextInputLayout
-           android:layout_width="wrap_content"
-           android:layout_height="match_parent"
-           app:boxBackgroundMode="outline">
 
-           <com.google.android.material.textfield.TextInputEditText
-               android:imeOptions="actionDone"
-               android:id="@+id/inputRecepient"
-               android:hint="Input Matric Number"
-               android:inputType="text"
-               android:layout_height="match_parent"
-               android:fontFamily="@font/spacegrotesk_regular"
-               android:layout_width="wrap_content"/>
-
-
-       </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="263dp"
-            app:boxBackgroundMode="outline"
-            app:prefixText="₦">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputAmount"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/spacegrotesk_regular"
-                android:hint="Amount"
-                android:inputType="numberDecimal"
-
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <!-- Login Button -->
-        <Button
-            android:id="@+id/btnLogin"
+        <EditText
+            android:id="@+id/Matric"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:text="Send "
             android:fontFamily="@font/spacegrotesk_regular"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:hint="Matric Number"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#999999"
+            android:inputType="text"
+          />
+
+        <EditText
+            android:id="@+id/inputAmount"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:hint="Amount (₦)"
+            android:fontFamily="@font/spacegrotesk_regular"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#999999"
+            android:inputType="numberDecimal"
+          />
+
+
+        <EditText
+            android:id="@+id/inputNote"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:hint="Note (optional)"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#999999"
+            android:inputType="text"
+            android:fontFamily="@font/spacegrotesk_regular"
+            />
+
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginTop="24dp"
+            android:text="Send"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/spacegrotesk_regular"
             android:background="@drawable/rounded_button"/>
-
-
 
     </LinearLayout>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

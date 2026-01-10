@@ -9,6 +9,7 @@
         android:icon="@drawable/cholar_logo"
         android:label="Cholar"
         android:roundIcon="@drawable/cholar_logo"
+
         android:supportsRtl="true"
         android:theme="@style/Theme.NewApp">
         <activity

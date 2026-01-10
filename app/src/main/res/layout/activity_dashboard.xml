@@ -3,24 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
-    android:background="@color/app_background">
+    android:fitsSystemWindows="false"
+    android:background="@color/app_primary">
 
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/topAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/app_primary"
-        android:title="Cholar"
-        android:titleTextColor="@android:color/white" />
-
-
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="56dp"
         android:background="@color/app_primary"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
@@ -36,6 +27,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
+                android:layout_marginTop="40dp"
                 android:padding="8dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
@@ -238,7 +230,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Transcations"
+                android:text="Transactions"
                 android:fontFamily="@font/spacegrotesk_regular"
                 android:textSize="20sp"
                 android:textColor="@color/white"
@@ -246,32 +238,55 @@
                 android:layout_marginTop="26dp"
                 />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:fontFamily="@font/spacegrotesk_regular"
-                android:layout_height="wrap_content"
-                android:text="No transations yet."
-                android:textAlignment="center"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                />
 
-            <TextView
-                android:layout_width="wrap_content"
+
+            <FrameLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/spacegrotesk_regular"
-                android:text="Your activity will appear here."
-                android:textSize="15sp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:layout_marginTop="24dp"
-                android:textAlignment="center"
-                />
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                >
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="80dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_transaction" />
+
+                <LinearLayout
+                    android:id="@+id/emptyState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/rectangle_list"
+                        app:tint="@color/mini_white"
+                        android:alpha="0.3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/spacegrotesk_regular"
+                        android:text="No transactions yet"
+                        android:textColor="@color/mini_white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </FrameLayout>
+
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 
 

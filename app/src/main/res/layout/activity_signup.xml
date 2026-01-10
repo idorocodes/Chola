@@ -94,7 +94,7 @@
             android:inputType="textPassword"/>
 
         <EditText
-            android:id="@+id/inputSamePassword"
+            android:id="@+id/inputConfirmPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:textSize="14sp"
@@ -109,7 +109,7 @@
 
         <!-- Login Button -->
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnsignUp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Sign Up"
